@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aneka Lakban | Motto Pack Indonesia</title>
+<meta name="description" content="Katalog Aneka Lakban Motto Pack Indonesia, distributor bahan packaging dan produk FMCG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="Logo/favicon.png">
+<link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Motto Pack Indonesia - Beranda"><img src="Logo/logo-motto.png" alt="Motto" width="129" height="40"></a>
+    <nav class="nav-links" aria-label="Katalog">
+      <a href="aneka-lakban.html" class="active">Aneka Lakban</a>
+      <a href="aneka-non-lakban.html">Aneka Non Lakban</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow" id="eyebrow"></span>
+    <h1 id="title"></h1>
+    <p id="intro"></p>
+  </div>
+</section>
+
+<main class="wrap" id="katalog">
+  <div class="toolbar">
+    <div class="count" id="count"></div>
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="search" type="search" placeholder="Cari produk..." aria-label="Cari produk">
+    </label>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© Motto Pack Indonesia. Distributor bahan packaging &amp; FMCG.</span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="close" id="m-close" aria-label="Tutup">&times;</button>
+    <div class="m-visual" id="m-visual"></div>
+    <div class="m-body">
+      <span class="eyebrow">Detail Produk</span>
+      <h2 id="m-title"></h2>
+      <p id="m-desc"></p>
+      <dl class="specs">
+        <div><dt>Ukuran</dt><dd>Tersedia berbagai ukuran</dd></div>
+        <div><dt>Kemasan</dt><dd>Eceran &amp; grosir</dd></div>
+        <div><dt>Ketersediaan</dt><dd>Ready stock</dd></div>
+      </dl>
+      <button class="btn btn-primary" id="m-back" type="button">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<script>
+window.CATALOG = {
+ "eyebrow": "Katalog 01",
+ "title": "Aneka Lakban",
+ "intro": "Lakban dan isolasi lengkap untuk pengemasan, penandaan, dan kebutuhan harian bisnis Anda.",
+ "items": [
+  [
+   "Lakban OPP (Bening & Cokelat)",
+   "Lakban perekat kuat untuk penyegelan kardus, tersedia bening dan cokelat.",
+   "Assets/Lakban OPP (Bening & Cokelat)/Motto_48mmx85mx45micron_Bening_3.jpg"
+  ],
+  [
+   "Lakban Warna (Pigmen)",
+   "Lakban OPP berwarna untuk pengkodean, branding, dan tampilan kemasan menarik.",
+   "Assets/Lakban Warna (Pigmen)/Motto_48mmx50mx47micron_Pigmen_Hijau_3.jpg"
+  ],
+  [
+   "Lakban Blok",
+   "Lakban cetak blok untuk kebutuhan penanda dan identitas paket.",
+   "Assets/Lakban Blok/Motto_Full-Blok_Compilation_2.jpg"
+  ],
+  [
+   "Lakban Fragile",
+   "Lakban bertanda 'Fragile' agar paket mudah dikenali dan ditangani hati-hati.",
+   "Assets/Lakban Fragile/Motto_48mmx50mx48micron_Fragile_Putih_4.jpg"
+  ],
+  [
+   "Lakban Fragile Unboxing",
+   "Lakban fragile dengan fungsi tambahan untuk bukti unboxing paket.",
+   "Assets/Lakban Fragile Unboxing/Motto_45mmx70mx48micron_Unboxing_Putih_4.jpg"
+  ],
+  [
+   "Lakban Shopee",
+   "Lakban bermotif Shopee untuk pengemasan toko online.",
+   "Assets/Lakban Shopee/Motto_48mmx70mx48micron_Shopee_Orange_3.jpg"
+  ],
+  [
+   "Lakban Tokopedia",
+   "Lakban bermotif Tokopedia untuk pengemasan toko online.",
+   "Assets/Lakban Tokopedia/Motto_48mmx70mx48micron_Tokopedia_Hijau_4.jpg"
+  ],
+  [
+   "Lakban Kain",
+   "Lakban berbahan kain, kuat, mudah disobek tangan, serbaguna.",
+   "Assets/Lakban Kain/Motto_44mmx8m_Lakban-Kain_Kuning_3.jpg"
+  ],
+  [
+   "Lakban Kertas / Masking Tape",
+   "Perekat kertas mudah dilepas, cocok untuk pelabelan, pengecatan, dan penandaan.",
+   "Assets/Lakban Kertas - Masking Tape/Motto_Lakban-Kertas.png"
+  ],
+  [
+   "Lakban Kraft Tape",
+   "Lakban kertas kraft ramah lingkungan untuk kemasan premium.",
+   "Assets/Lakban Kraft Tape/Motto_48mmx10m_Kraft-Tape_2.jpg"
+  ],
+  [
+   "Lakban Aluminium Foil",
+   "Lakban foil tahan panas dan kedap untuk keperluan insulasi dan perbaikan.",
+   "Assets/Lakban Aluminium Foil/Motto_44mmx15m_Alumunium-Tape_2.jpg"
+  ],
+  [
+   "Double Tape Kertas",
+   "Perekat dua sisi berbahan kertas, tipis dan rapi untuk kerajinan dan kemasan.",
+   "Assets/Double Tape Kertas/Motto_Double-Tape_Compilations.png"
+  ],
+  [
+   "PE Double Foam Tape",
+   "Busa PE dua sisi dengan daya rekat kuat untuk pemasangan dan dekorasi.",
+   "Assets/PE Double Foam Tape/Motto_24mmx5m_PE-Double-Foam_2.jpg"
+  ],
+  [
+   "EVA Double Foam Tape",
+   "Busa EVA dua sisi, empuk dan tahan lama untuk berbagai permukaan.",
+   "Assets/EVA Double Foam Tape/Motto_24mmx5m_EVA-Double-Foam-Tape_2.jpg"
+  ],
+  [
+   "Isolasi Bening",
+   "Isolasi transparan serbaguna untuk kebutuhan kantor dan rumah.",
+   "Assets/Isolasi Bening/Motto_Isolasi_Compilation.png"
+  ],
+  [
+   "Isolasi Warna (Pigmen)",
+   "Isolasi berwarna untuk dekorasi, kerajinan, dan penandaan.",
+   "Assets/Isolasi Warna (Pigmen)/Motto_12mmx60mx47micron_Isolasi-Pigmen_Hitam_3.jpg"
+  ],
+  [
+   "Isolasi Listrik PVC",
+   "Isolasi PVC untuk melindungi sambungan kabel listrik.",
+   "Assets/Isolasi Listrik PVC/Motto_PVC-Electric.png"
+  ],
+  [
+   "Isolasi Fresh (Sayur)",
+   "Isolasi khusus pengikat sayuran segar, praktis dan higienis.",
+   "Assets/Isolasi Fresh (Sayur)/Motto_18mmx50mx48micron_Isolasi-Fresh_3.jpg"
+  ],
+  [
+   "PVC Floor Marking",
+   "Perekat lantai untuk penanda area, jalur, dan keselamatan gudang.",
+   "Assets/PVC Floor Marking/Motto_48mmx33m_Kuning-Hitam_3.jpg"
+  ],
+  [
+   "Dispenser Lakban 2 Inch",
+   "Dispenser lakban ukuran 2 inci untuk pengemasan lebih cepat.",
+   "Assets/Dispenser Lakban 2 Inch/Motto_Tape_Dispenser_300m_2.jpg"
+  ],
+  [
+   "Dispenser Lakban Jumbo",
+   "Dispenser lakban ukuran jumbo untuk volume packing tinggi.",
+   "Assets/Dispenser Lakban Jumbo/Motto_Tape_Dispenser_Jumbo_2.jpg"
+  ],
+  [
+   "Dispenser Isolasi",
+   "Dispenser isolasi praktis dan stabil untuk meja kerja.",
+   "Assets/Dispenser Isolasi/Motto_SKUs_Dispenser-Isolasi_Replacement_3.jpg"
+  ]
+ ]
+};
+</script>
+<script src="catalog.js"></script>
+</body>
+</html>

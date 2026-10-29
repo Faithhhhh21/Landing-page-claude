@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- ============================================================
+       Motto Pack Indonesia — Corporate Landing Page
+       Version : 1.0
+       Author  : Antigravity (AI Assistant)
+       Date    : 2026-10-27
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Motto Pack Indonesia — Distributor terkemuka produk Pengemasan industri & FMCG. Solusi lengkap untuk kebutuhan pengemasan bisnis Anda." />
+  <meta name="keywords" content="Pengemasan, lakban, bubble wrap, polymailer, strapping band, stretch film, distributor, FMCG, Indonesia" />
+  <title>Motto Pack Indonesia | Distributor Pengemasan & FMCG Terpercaya</title>
+
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ── Font Awesome Icons ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — Edit colors/fonts here
+    ============================================================ */
+    :root {
+      /* — Brand Colors — */
+      --red-primary   : #E8192C;   /* Motto signature red */
+      --red-dark      : #C0111F;   /* Darker red for hover states */
+      --red-light     : #FF3347;   /* Lighter red for accents */
+      --red-glow      : rgba(232, 25, 44, 0.15);
+
+      /* — Neutral Palette — */
+      --dark-900      : #0D0D0D;
+      --dark-800      : #141414;
+      --dark-700      : #1E1E1E;
+      --dark-600      : #2A2A2A;
+      --gray-500      : #6B6B6B;
+      --gray-400      : #9A9A9A;
+      --gray-200      : #E5E5E5;
+      --gray-100      : #F5F5F5;
+      --white         : #FFFFFF;
+
+      /* — Typography — */
+      --font-primary  : 'Plus Jakarta Sans', 'Inter', sans-serif;
+      --font-body     : 'Inter', sans-serif;
+
+      /* — Spacing & Layout — */
+      --section-py    : 100px;
+      --container-max : 1240px;
+      --nav-height    : 80px;
+
+      /* — Transitions — */
+      --ease-smooth   : cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-bounce   : cubic-bezier(0.34, 1.56, 0.64, 1);
+
+      /* — Shadows — */
+      --shadow-card   : 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-hover  : 0 12px 40px rgba(0,0,0,0.15);
+      --shadow-red    : 0 8px 32px rgba(232, 25, 44, 0.30);
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--dark-900);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* ── Utility ── */
+    .container {
+      width: 90%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red-primary);
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--red-primary);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-primary);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--dark-900);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--gray-500);
+      max-width: 560px;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-family: var(--font-primary);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s var(--ease-smooth);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--red-primary);
+      color: var(--white);
+      box-shadow: var(--shadow-red);
+    }
+    .btn-primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(232, 25, 44, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--dark-800);
+      color: var(--white);
+    }
+    .btn-dark:hover {
+      background: var(--dark-700);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    /* ── Scroll reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s var(--ease-smooth), transform 0.7s var(--ease-smooth);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      transition: background 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth);
+      padding: 0;
+    }
+
+    #navbar.scrolled {
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    /* Logo */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Nav Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav-links a {
+      font-family: var(--font-primary);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-800);
+      position: relative;
+      transition: color 0.3s;
+    }
+    #navbar.scrolled .nav-links a { color: var(--dark-800); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 0; height: 2px;
+      background: var(--red-primary);
+      transition: width 0.3s var(--ease-smooth);
+      border-radius: 2px;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+    .nav-links a:hover { color: var(--red-primary); }
+    #navbar.scrolled .nav-links a:hover { color: var(--red-primary); }
+
+    /* Nav CTA */
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-cta .btn {
+      padding: 10px 22px;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+
+    /* Hamburger */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--dark-800);
+      border-radius: 2px;
+      transition: all 0.3s var(--ease-smooth);
+    }
+    #navbar.scrolled .nav-hamburger span { background: var(--dark-800); }
+
+    /* Mobile nav */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0; right: 0;
+      background: var(--white);
+      padding: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      z-index: 999;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--font-primary);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark-800);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    /* Animated background grid */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, #FFFFFF 0%, #FFF5F6 50%, #FFFFFF 100%);
+    }
+
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(232,25,44,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,25,44,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove 20s linear infinite;
+    }
+    @keyframes gridMove {
+      0%   { background-position: 0 0, 0 0; }
+      100% { background-position: 60px 60px, 60px 60px; }
+    }
+
+    /* Red gradient orbs */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      animation: orbFloat 8s ease-in-out infinite;
+    }
+    .hero-orb-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(232,25,44,0.12) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      animation-delay: 0s;
+    }
+    .hero-orb-2 {
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(232,25,44,0.08) 0%, transparent 70%);
+      bottom: -80px; left: 10%;
+      animation-delay: -4s;
+    }
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-30px) scale(1.05); }
+    }
+
+    /* Red accent bar on left */
+    .hero-accent-bar {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, transparent 0%, var(--red-primary) 30%, var(--red-light) 70%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: var(--nav-height) 0 80px;
+    }
+
+    .hero-text {}
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(232,25,44,0.15);
+      border: 1px solid rgba(232,25,44,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red-light);
+      margin-bottom: 28px;
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px;
+      background: var(--red-light);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(1.5); }
+    }
+
+    .hero-headline {
+      font-family: var(--font-primary);
+      font-size: clamp(36px, 5.5vw, 68px);
+      font-weight: 900;
+      line-height: 1.08;
+      color: var(--dark-900);
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+    .hero-headline .accent {
+      color: var(--red-primary);
+      position: relative;
+    }
+
+    .hero-sub {
+      font-size: clamp(15px, 1.5vw, 18px);
+      line-height: 1.75;
+      color: var(--gray-500);
+      margin-bottom: 44px;
+      max-width: 500px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      padding-top: 40px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .hero-stat-item {}
+    .hero-stat-num {
+      font-family: var(--font-primary);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--dark-900);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hero-stat-num span { color: var(--red-primary); }
+    .hero-stat-label {
+      font-size: 13px;
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    .hero-outline {
+      color: var(--dark-800);
+      border-color: var(--gray-200);
+    }
+    .hero-outline:hover {
+      background: var(--gray-100);
+      border-color: var(--dark-800);
+    }
+
+    /* Hero right visual */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .hero-product-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-card);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s var(--ease-smooth), border-color 0.3s;
+      
+    }
+    .hero-product-card:nth-child(2) { animation-delay: 0s; }
+    .hero-product-card:nth-child(3) { animation-delay: 0s; }
+    .hero-product-card:nth-child(4) { animation-delay: 0s;}
+     {
+      transform: translateY(-6px);
+      border-color: rgba(232,25,44,0.4);
+    }
+    @keyframes cardHover {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-4px); }
+    }
+
+    .hero-product-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+    .hero-product-card .card-label {
+      padding: 10px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--dark-800);
+    }
+
+    /* Floating badge on hero visual */
+    .hero-float-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      border: 1px solid var(--gray-200);
+      animation: floatBadge 4s ease-in-out infinite;
+    }
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+    .hero-float-badge .badge-icon {
+      width: 40px; height: 40px;
+      background: var(--red-glow);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red-primary);
+      font-size: 18px;
+    }
+    .hero-float-badge .badge-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--dark-900);
+      font-family: var(--font-primary);
+    }
+    .hero-float-badge .badge-text span {
+      font-size: 11px;
+      color: var(--gray-500);
+    }
+
+    /* ── Scroll indicator ── */
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--gray-400);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    .scroll-wheel {
+      width: 24px; height: 40px;
+      border: 2px solid var(--gray-200);
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      padding-top: 6px;
+    }
+    .scroll-wheel::after {
+      content: '';
+      width: 4px; height: 8px;
+      background: var(--gray-400);
+      border-radius: 2px;
+      animation: scrollDot 2s ease-in-out infinite;
+    }
+    @keyframes scrollDot {
+      0%   { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(14px); opacity: 0; }
+    }
+
+    /* ============================================================
+       TRUST BAR / MARQUEE
+    ============================================================ */
+    #trust-bar {
+      background: var(--red-primary);
+      padding: 14px 0;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marqueeScroll 30s linear infinite;
+      width: max-content;
+    }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 40px;
+      font-family: var(--font-primary);
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .marquee-item i { color: rgba(255,255,255,0.6); font-size: 10px; }
+
+    @keyframes marqueeScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       ABOUT SECTION
+    ============================================================ */
+    #about {
+      padding: var(--section-py) 0;
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-text {}
+
+    .about-body {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--gray-500);
+      margin-bottom: 32px;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .about-highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--gray-100);
+      border-radius: 12px;
+      border-left: 3px solid var(--red-primary);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .about-highlight-item:hover {
+      background: var(--red-glow);
+      transform: translateX(4px);
+    }
+    .about-highlight-item .hl-icon {
+      width: 40px; height: 40px;
+      min-width: 40px;
+      background: var(--red-glow);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red-primary);
+      font-size: 16px;
+    }
+    .about-highlight-item .hl-content strong {
+      display: block;
+      font-family: var(--font-primary);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark-800);
+      margin-bottom: 2px;
+    }
+    .about-highlight-item .hl-content span {
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+
+    /* About right: stat cards */
+    .about-visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .stat-card {
+      background: var(--gray-100);
+      border-radius: 20px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s;
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--red-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s var(--ease-smooth);
+    }
+    .stat-card:hover::before { transform: scaleX(1); }
+    .stat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .stat-card.featured {
+      background: var(--dark-900);
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 36px;
+    }
+    .stat-card.featured::before { background: var(--red-primary); }
+
+    .stat-card .stat-num {
+      font-family: var(--font-primary);
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--dark-900);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card .stat-num span { color: var(--red-primary); }
+    .stat-card.featured .stat-num { color: var(--white); font-size: 56px; }
+
+    .stat-card .stat-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .stat-card.featured .stat-label { color: rgba(255,255,255,0.5); }
+
+    .stat-card .stat-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .stat-icon {
+      font-size: 64px;
+      color: rgba(255,255,255,0.05);
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+    }
+
+    /* ============================================================
+       PRODUCTS SECTION
+    ============================================================ */
+    #products {
+      padding: var(--section-py) 0;
+      background: var(--gray-100);
+    }
+
+    .products-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .products-header .section-label { justify-content: center; }
+    .products-header .section-subtitle { margin: 0 auto; }
+
+    /* Category tabs */
+    .product-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      padding: 12px 24px;
+      border-radius: 100px;
+      border: 2px solid var(--gray-200);
+      background: var(--white);
+      font-family: var(--font-primary);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray-500);
+      cursor: pointer;
+      transition: all 0.3s var(--ease-smooth);
+    }
+    .tab-btn:hover,
+    .tab-btn.active {
+      background: var(--red-primary);
+      border-color: var(--red-primary);
+      color: var(--white);
+      box-shadow: var(--shadow-red);
+    }
+
+    /* ── Katalog produk (prefix kt-) ── */
+    #products, .kt-overlay {
+      --kt-navy: #231f20;
+      --kt-navy-2: #3d3738;
+      --kt-line: var(--gray-200);
+      --kt-soft: var(--gray-100);
+      --kt-muted: var(--gray-500);
+      --kt-accent: var(--red-primary);
+      --kt-accent-d: var(--red-dark);
+      --kt-shadow: 0 1px 2px rgba(35,31,32,.06), 0 8px 24px rgba(35,31,32,.06);
+      --kt-shadow-h: 0 2px 4px rgba(35,31,32,.08), 0 16px 36px rgba(35,31,32,.14);
+    }
+
+    .kt-intro {
+      text-align: center;
+      color: var(--kt-muted);
+      font-size: 15px;
+      max-width: 640px;
+      margin: 0 auto 24px;
+    }
+
+    .kt-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+    .kt-count { font-size: 14px; color: var(--kt-muted); }
+    .kt-count b { color: var(--kt-navy); }
+    .kt-search { position: relative; flex: 1; max-width: 380px; min-width: 220px; }
+    .kt-search input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      border: 1px solid var(--kt-line);
+      border-radius: 999px;
+      font: inherit;
+      font-size: 14px;
+      background: var(--white);
+      transition: .2s;
+    }
+    .kt-search input:focus {
+      outline: 0;
+      border-color: var(--kt-navy-2);
+      box-shadow: 0 0 0 4px rgba(61,55,56,.1);
+    }
+    .kt-search svg {
+      position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+      width: 18px; height: 18px; stroke: var(--kt-muted); fill: none;
+      stroke-width: 2; stroke-linecap: round; pointer-events: none;
+    }
+
+    .kt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 22px;
+    }
+    .kt-card {
+      display: flex; flex-direction: column; width: 100%;
+      text-align: left; font: inherit; color: inherit; cursor: pointer;
+      background: var(--white);
+      border: 1px solid var(--kt-line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--kt-shadow);
+      transition: transform .35s var(--ease-smooth), opacity .5s var(--ease-smooth), box-shadow .35s var(--ease-smooth), border-color .35s;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    .kt-card.in { opacity: 1; transform: none; }
+    .kt-card:focus-visible { outline: 0; box-shadow: 0 0 0 3px var(--kt-accent), var(--kt-shadow-h); }
+    @media (hover: hover) {
+      .kt-card:hover { transform: translateY(-6px); box-shadow: var(--kt-shadow-h); border-color: #cfd8e3; }
+      .kt-card:hover .kt-thumb img { transform: scale(1.05); }
+      .kt-card:hover .kt-more i { transform: translateX(5px); }
+    }
+    .kt-thumb {
+      position: relative; aspect-ratio: 1 / 1; overflow: hidden;
+      background: linear-gradient(135deg, var(--kt-soft), #e9eef5);
+      display: grid; place-items: center;
+    }
+    .kt-thumb svg { width: 54px; height: 54px; stroke: var(--kt-navy-2); opacity: .75; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .kt-thumb img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; transition: transform .5s var(--ease-smooth);
+    }
+    .kt-num {
+      position: absolute; top: 12px; left: 12px;
+      font-size: 11px; font-weight: 700; color: var(--kt-navy);
+      background: var(--white); border-radius: 999px; padding: 3px 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    }
+    .kt-body { padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .kt-body h3 { font-family: var(--font-primary); font-size: 16px; line-height: 1.3; color: var(--kt-navy); letter-spacing: -.01em; }
+    .kt-body p {
+      font-size: 13px; line-height: 1.6; color: var(--kt-muted);
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .kt-more {
+      margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 700;
+      color: var(--kt-accent); display: flex; align-items: center; gap: 6px;
+    }
+    .kt-more i { font-style: normal; transition: transform .25s; }
+    .kt-price { font-family: var(--font-primary); font-size: 14px; font-weight: 800; color: var(--kt-accent); line-height: 1.3; }
+    .kt-note { font-size: 12.5px; color: var(--kt-muted); margin: -10px 0 18px; }
+    .kt-m-price { margin-top: 10px; font-family: var(--font-primary); font-size: 20px; font-weight: 800; color: var(--kt-accent); }
+    .kt-empty { grid-column: 1 / -1; text-align: center; color: var(--kt-muted); padding: 60px 0; }
+
+    /* Modal detail produk */
+    body.kt-lock { overflow: hidden; }
+    .kt-overlay {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(20,17,18,.55);
+      -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+      display: grid; place-items: center; padding: 20px;
+      opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
+    }
+    .kt-overlay.open { opacity: 1; visibility: visible; }
+    .kt-modal {
+      position: relative; width: min(760px, 100%);
+      max-height: 90vh; max-height: 90dvh; overflow: auto;
+      background: var(--white); border-radius: 20px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.3);
+      display: grid; grid-template-columns: 1fr 1.2fr;
+      transform: translateY(24px) scale(.97);
+      transition: transform .4s var(--ease-smooth);
+    }
+    .kt-overlay.open .kt-modal { transform: none; }
+    .kt-m-visual {
+      background: linear-gradient(135deg, var(--kt-navy), var(--kt-navy-2));
+      display: grid; place-items: center; min-height: 240px; position: relative;
+    }
+    .kt-m-visual svg { width: 96px; height: 96px; stroke: #fff; opacity: .9; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .kt-m-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .kt-m-body { padding: 34px 30px; }
+    .kt-m-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--kt-accent); margin-bottom: 8px; }
+    .kt-m-body h2 { font-family: var(--font-primary); font-size: 24px; line-height: 1.2; color: var(--kt-navy); letter-spacing: -.02em; }
+    .kt-m-body > p { margin-top: 12px; color: var(--kt-muted); font-size: 15px; line-height: 1.6; }
+    .kt-specs { margin: 18px 0 22px; border-top: 1px solid var(--kt-line); }
+    .kt-specs div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--kt-line); font-size: 14px; }
+    .kt-specs dt { color: var(--kt-muted); }
+    .kt-specs dd { font-weight: 600; color: var(--kt-navy); text-align: right; }
+    .kt-close {
+      position: absolute; top: 14px; right: 14px; z-index: 2;
+      width: 40px; height: 40px; border-radius: 50%; border: 0;
+      background: var(--white); color: var(--kt-navy); font-size: 22px; line-height: 1; cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,.15); transition: .2s;
+    }
+    .kt-close:hover { transform: rotate(90deg); background: var(--kt-soft); }
+
+    @media (max-width: 720px) {
+      .kt-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .kt-body { padding: 14px 14px 12px; }
+      .kt-body p { display: none; }
+      .kt-toolbar { flex-direction: column; align-items: stretch; }
+      .kt-search { max-width: none; }
+      .kt-count { text-align: center; }
+      .kt-modal { grid-template-columns: 1fr; }
+      .kt-m-visual { min-height: 0; aspect-ratio: 1 / 1; max-height: 320px; }
+      .kt-m-body { padding: 24px 20px; }
+    }
+    @media (max-width: 380px) { .kt-grid { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) {
+      .kt-card { opacity: 1; transform: none; transition: none; }
+      .kt-overlay, .kt-modal { transition: none; }
+    }
+
+    /* ============================================================
+       E-COMMERCE SECTION
+    ============================================================ */
+    #ecommerce {
+      padding: var(--section-py) 0;
+      background: var(--white);
+    }
+
+    .ecommerce-header .section-label { justify-content: center; }
+    .ecommerce-header .section-subtitle { margin: 0 auto; }
+
+    .ecommerce-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 56px;
+    }
+
+    .store-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s;
+    }
+    .store-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Shopee card */
+    .store-card.shopee {
+      background: linear-gradient(135deg, #FF5722 0%, #FF8A65 100%);
+    }
+    /* Tokopedia card */
+    .store-card.tokopedia {
+      background: linear-gradient(135deg, #00AA5B 0%, #00C273 100%);
+    }
+
+    .store-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Ccircle cx='30' cy='30' r='30'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+
+    .store-platform-icon {
+      position: relative;
+      width: 68px; height: 68px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--white);
+      backdrop-filter: blur(8px);
+    }
+
+    .store-card-content { position: relative; }
+    .store-card-platform {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 6px;
+    }
+    .store-card-title {
+      font-family: var(--font-primary);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .store-card-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+    }
+
+    .store-card-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border-radius: 10px;
+      padding: 14px 28px;
+      font-family: var(--font-primary);
+      font-size: 15px;
+      font-weight: 800;
+      transition: all 0.3s var(--ease-smooth);
+      margin-top: 8px;
+    }
+    .store-card.shopee  .store-card-link { color: #FF5722; }
+    .store-card.tokopedia .store-card-link { color: #00AA5B; }
+    .store-card-link:hover {
+      transform: translateX(4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    /* Decorative circle */
+    .store-card-circle {
+      position: absolute;
+      right: -60px; bottom: -60px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    .store-card-circle-2 {
+      position: absolute;
+      right: 60px; top: -80px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* ============================================================
+       Media Sosial SECTION
+    ============================================================ */
+    #social {
+      padding: var(--section-py) 0;
+      background: var(--gray-100);
+    }
+
+    .social-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .social-header .section-label { justify-content: center; }
+    .social-header .section-subtitle { margin: 0 auto; }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .social-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 44px 32px;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: var(--shadow-card);
+      text-align: center;
+      transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .social-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .social-card.instagram:hover .social-icon-wrap { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: white; }
+    .social-card.tiktok:hover .social-icon-wrap { background: #000000; color: white; }
+
+    .social-icon-wrap {
+      width: 72px; height: 72px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      background: var(--gray-100);
+      color: var(--dark-800);
+      transition: all 0.3s var(--ease-smooth);
+    }
+
+    .social-card-name {
+      font-family: var(--font-primary);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark-900);
+    }
+    .social-card-handle {
+      font-size: 14px;
+      color: var(--gray-500);
+      margin-top: -8px;
+    }
+    .social-card-desc {
+      font-size: 13px;
+      color: var(--gray-400);
+      line-height: 1.6;
+    }
+    .social-card .btn {
+      width: 100%;
+      font-size: 14px;
+    }
+
+    /* ============================================================
+       CONTACT / SALES SECTION
+    ============================================================ */
+    #contact {
+      padding: var(--section-py) 0;
+      background: var(--dark-900);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-bg-orb {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,25,44,0.12) 0%, transparent 70%);
+      top: -200px; right: -200px;
+      pointer-events: none;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .contact-text .section-title { color: var(--white); }
+    .contact-text .section-subtitle { color: rgba(255,255,255,0.55); }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .contact-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .contact-detail-item:hover {
+      background: rgba(232,25,44,0.08);
+      border-color: rgba(232,25,44,0.2);
+    }
+    .contact-detail-item .ci-icon {
+      width: 44px; height: 44px;
+      min-width: 44px;
+      background: rgba(232,25,44,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red-light);
+      font-size: 18px;
+    }
+    .contact-detail-item .ci-text strong {
+      display: block;
+      font-family: var(--font-primary);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .contact-detail-item .ci-text span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* CTA card */
+    .contact-cta-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 48px 44px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+    }
+
+    .contact-cta-card h3 {
+      font-family: var(--font-primary);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--dark-900);
+      margin-bottom: 12px;
+    }
+
+    .contact-cta-card p {
+      font-size: 15px;
+      color: var(--gray-500);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .wa-contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #25D366;
+      border-radius: 14px;
+      padding: 20px 28px;
+      width: 100%;
+      text-decoration: none;
+      transition: all 0.3s var(--ease-smooth);
+      margin-bottom: 20px;
+    }
+    .wa-contact-btn:hover {
+      background: #20ba59;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(37,211,102,0.35);
+    }
+
+    .wa-icon {
+      width: 52px; height: 52px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .wa-text strong {
+      display: block;
+      font-family: var(--font-primary);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .wa-text span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .contact-note {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+    .contact-note i { color: #25D366; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: var(--dark-800);
+      padding: 60px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 32px;
+    }
+
+    .footer-brand {}
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .footer-logo img { height: 40px; }
+
+    .footer-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      max-width: 280px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+    }
+    .footer-social a {
+      width: 38px; height: 38px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 15px;
+      transition: all 0.3s;
+    }
+    .footer-social a:hover {
+      background: var(--red-primary);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-primary);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--red-light); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-copy a { color: var(--red-light); }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-bottom-links a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+      transition: color 0.2s;
+    }
+    .footer-bottom-links a:hover { color: var(--white); }
+
+    /* ============================================================
+       FLOATING WHATSAPP BUTTON
+    ============================================================ */
+    #wa-float {
+      position: fixed;
+      right: 28px;
+      bottom: 28px;
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .wa-float-tooltip {
+      background: var(--dark-900);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all 0.3s var(--ease-smooth);
+      pointer-events: none;
+    }
+    #wa-float:hover .wa-float-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .wa-float-btn {
+      width: 60px; height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--white);
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      transition: transform 0.3s var(--ease-bounce), box-shadow 0.3s;
+      animation: waBounce 3s ease-in-out infinite;
+    }
+    .wa-float-btn:hover {
+      transform: scale(1.12);
+      box-shadow: 0 10px 36px rgba(37,211,102,0.6);
+      animation: none;
+    }
+    @keyframes waBounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-6px); }
+    }
+
+    /* Ping ring */
+    .wa-float-btn::before {
+      content: '';
+      position: absolute;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      border: 2px solid rgba(37,211,102,0.5);
+      animation: waPing 2s ease-out infinite;
+    }
+    @keyframes waPing {
+      0%   { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    /* ============================================================
+       RESPONSIVE — TABLET (≤ 1024px)
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; text-align: center; }
+      .hero-text { order: 1; }
+      .hero-visual { order: 2; max-width: 440px; margin: 0 auto; }
+      .hero-sub { margin: 0 auto 44px; }
+      .hero-actions { justify-content: center; }
+      .hero-stats { justify-content: center; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-visual { max-width: 500px; margin: 0 auto; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    /* ============================================================
+       RESPONSIVE — MOBILE (≤ 768px)
+    ============================================================ */
+    @media (max-width: 768px) {
+      :root { --section-py: 72px; }
+
+      /* Nav */
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+
+      /* Hero */
+      .hero-product-grid { grid-template-columns: 1fr 1fr; max-width: 320px; }
+      .hero-float-badge { display: none; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+
+      /* E-commerce */
+      .ecommerce-grid { grid-template-columns: 1fr; }
+      .store-card { padding: 36px 28px; }
+
+      /* Social */
+      .social-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Contact */
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { justify-content: center; }
+    }
+
+    /* ============================================================
+       RESPONSIVE — SMALL MOBILE (≤ 480px)
+    ============================================================ */
+    @media (max-width: 480px) {
+      .social-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-direction: column; gap: 16px; align-items: flex-start; }
+      .store-card { padding: 28px 22px; }
+      .contact-cta-card { padding: 32px 24px; }
+    }
+
+
+    /* ============================================================
+       UI/UX REFINEMENT LAYER
+       Lapisan penyempurnaan visual & interaksi. Struktur, konten, warna brand,
+       font, dan data tidak diubah. Hapus blok ini untuk kembali ke tampilan awal.
+    ============================================================ */
+
+    /* — Aksesibilitas: fokus keyboard terlihat di semua elemen interaktif — */
+    :focus-visible { outline: 3px solid var(--red-primary); outline-offset: 3px; border-radius: 6px; }
+    .btn:focus-visible, .tab-btn:focus-visible { outline-offset: 3px; border-radius: 100px; }
+    .btn:focus-visible { border-radius: 8px; }
+    html { scroll-padding-top: var(--nav-height); }
+
+    /* — Kontras teks kecil (WCAG AA 4.5:1) — */
+    .hero-badge { color: var(--red-dark); background: rgba(232,25,44,0.10); }
+    .hero-badge .dot { background: var(--red-primary); }
+    #products .section-label { color: var(--red-dark); }
+    #products .section-label::before { background: var(--red-dark); }
+
+    /* — Hero: kartu produk (perbaikan aturan hover yang tidak punya selector) — */
+    @media (hover: hover) {
+      .hero-product-card:hover { transform: translateY(-6px); border-color: rgba(232,25,44,0.4); box-shadow: var(--shadow-hover); }
+    }
+    .hero-product-card .card-label { font-size: 13px; }
+    .hero-outline { border-color: #CFCFCF; }
+
+    /* — Tombol: hover dan tekan memberi umpan balik jelas — */
+    .btn:active { transform: translateY(0) scale(0.98); }
+    .btn { min-height: 44px; }
+
+    /* — Katalog: tab filter — */
+    .product-tabs {
+      position: sticky; top: var(--nav-height); z-index: 20;
+      padding: 12px 0; margin-bottom: 12px;
+      background: rgba(245,245,245,0.92);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      box-shadow: 0 0 0 100vmax rgba(245,245,245,0.92);
+      clip-path: inset(0 -100vmax);
+    }
+    .tab-btn { min-height: 44px; border-width: 1.5px; }
+    .tab-btn:hover { background: var(--white); border-color: var(--red-primary); color: var(--red-primary); box-shadow: none; }
+    .tab-btn.active, .tab-btn.active:hover { background: var(--red-primary); border-color: var(--red-primary); color: var(--white); box-shadow: var(--shadow-red); }
+
+    /* — Katalog: toolbar & pencarian — */
+    .kt-search input { padding-top: 13px; padding-bottom: 13px; min-height: 44px; }
+    .kt-search input::placeholder { color: var(--gray-500); }
+    .kt-count { font-variant-numeric: tabular-nums; }
+
+    /* — Katalog: kartu — */
+    .kt-thumb { background: var(--white); border-bottom: 1px solid var(--gray-100); }
+    .kt-thumb::before {            /* placeholder lembut selama foto dimuat */
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(110deg, var(--gray-100) 30%, #fff 50%, var(--gray-100) 70%);
+      background-size: 200% 100%; animation: ktShimmer 1.4s linear infinite;
+    }
+    .kt-thumb img { z-index: 1; }
+    .kt-thumb .kt-num { z-index: 2; }
+    @keyframes ktShimmer { to { background-position: -200% 0; } }
+    .kt-body { gap: 4px; }
+    .kt-body h3 { font-size: 15.5px; }
+    .kt-price { font-size: 15px; font-variant-numeric: tabular-nums; margin-top: 2px; }
+    .kt-more { padding-top: 12px; }
+    .kt-card:active { transform: scale(0.985); }
+    .kt-num { color: var(--gray-500); font-weight: 600; background: rgba(255,255,255,.92); }
+
+    /* — Katalog: modal detail — */
+    .kt-overlay { overscroll-behavior: contain; }
+    .kt-close { width: 44px; height: 44px; }
+    .kt-m-price { font-size: 22px; }
+    .kt-m-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .kt-m-actions .btn { flex: 1 1 160px; }
+    .kt-m-actions .btn-light { background: var(--white); color: var(--dark-800); border: 1.5px solid var(--gray-200); }
+    .kt-m-actions .btn-light:hover { border-color: var(--dark-800); background: var(--gray-100); }
+    .kt-empty a { color: var(--red-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* — WhatsApp mengambang: tidak menutupi konten di layar kecil — */
+    #wa-float { right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); }
+
+    /* — Tablet & mobile — */
+    @media (max-width: 768px) {
+      .hero-content { padding-top: calc(var(--nav-height) + 16px); padding-bottom: 56px; gap: 40px; }
+      .hero-actions { flex-direction: column; align-items: stretch; margin-bottom: 36px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-top: 28px; text-align: center; }
+      .hero-stat-num { font-size: 26px; }
+      .hero-stat-label { font-size: 12px; line-height: 1.35; }
+      .products-header { margin-bottom: 36px; }
+      .product-tabs { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; gap: 8px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+      .product-tabs::-webkit-scrollbar { display: none; }
+      .tab-btn { flex: 0 0 auto; padding: 10px 16px; font-size: 13px; }
+      #wa-float { right: 16px; bottom: 16px; }
+      .wa-float-btn { width: 52px; height: 52px; font-size: 24px; }
+      .wa-float-btn::before { width: 52px; height: 52px; }
+      .kt-m-actions .btn { flex-basis: 100%; }
+      /* modal: foto tidak lagi menyusut/menimpa judul saat konten lebih tinggi dari layar */
+      .kt-modal { display: flex; flex-direction: column; }
+      .kt-m-visual { flex: 0 0 auto; height: min(320px, 82vw); aspect-ratio: auto; max-height: none; min-height: 0; }
+      .kt-m-body { flex: 0 0 auto; }
+    }
+    @media (max-width: 480px) {
+      .hero-stats { flex-direction: unset; align-items: stretch; gap: 8px; }
+      .kt-body h3 { font-size: 14.5px; }
+      .kt-price { font-size: 13.5px; }
+    }
+
+    /* — Gerak: hormati preferensi "kurangi animasi" — */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; }
+      .marquee-track { animation: none !important; }
+      .kt-thumb::before { display: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+  ============================================================ -->
+  <div id="wa-float">
+    <div class="wa-float-tooltip">💬 Chat Puspa — Sales Motto</div>
+    <a class="wa-float-btn"
+       href="https://wa.me/6285215711572?text=Halo%20Puspa%2C%20saya%20ingin%20bertanya%20mengenai%20produk%20Motto%20Pack%20Indonesia."
+       target="_blank" rel="noopener"
+       aria-label="Chat via WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar" aria-label="Main Navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <!-- Logo -->
+        <a href="#hero" class="nav-logo" aria-label="Motto Pack Indonesia – Beranda">
+          <img src="assets/images/logo.png" alt="Motto Pack Indonesia Logo" />
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#products">Produk</a></li>
+          <li><a href="#ecommerce">Toko Online</a></li>
+          <li><a href="#social">Media Sosial</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+
+        <!-- Desktop CTA -->
+        
+
+        <!-- Hamburger (Mobile) -->
+        <button class="nav-hamburger" id="hamburger" aria-label="Buka Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile Menu">
+    <a href="#about"     onclick="closeMobileMenu()">Tentang Kami</a>
+    <a href="#products"  onclick="closeMobileMenu()">Produk</a>
+    <a href="#ecommerce" onclick="closeMobileMenu()">Toko Online</a>
+    <a href="#social"    onclick="closeMobileMenu()">Media Sosial</a>
+    <a href="#contact"   onclick="closeMobileMenu()">Kontak</a>
+    <a href="https://wa.me/6285215711572" target="_blank" rel="noopener"
+       class="btn btn-primary" style="justify-content:center;">
+      <i class="fab fa-whatsapp"></i>&nbsp; Hubungi Sales
+    </a>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero" aria-label="Hero — Intro">
+    <div class="hero-bg">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+    </div>
+    <div class="hero-accent-bar"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Distributor Resmi &amp; Terpercaya
+          </div>
+
+          <h1 class="hero-headline">
+            Solusi Pengemasan<br />
+            <span class="accent">Terlengkap</span><br />
+            Untuk Bisnis Anda
+          </h1>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/6285215711572?text=Halo%20Puspa%2C%20saya%20ingin%20inquiry%20B2B%20wholesale%20produk%20Motto%20Pack."
+               class="btn btn-primary" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Hubungi Sales Kami
+            </a>
+            <a href="#products" class="btn btn-outline hero-outline">
+              Lihat Katalog <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">300<span>+</span></div>
+              <div class="hero-stat-label">Varian Produk</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">13<span></span></div>
+              <div class="hero-stat-label">Kategori</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">1000+</div>
+              <div class="hero-stat-label">Konsumen Puas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Product Visual Grid -->
+        <div class="hero-visual">
+          <div class="hero-product-grid">
+            <div class="hero-product-card">
+              <img src="assets/images/product-tape.jpg" alt="OPP Tape Motto" loading="lazy" />
+              <div class="card-label">OPP Tape</div>
+            </div>
+            <div class="hero-product-card">
+              <img src="assets/images/product-bubble.png" alt="Bubble Wrap Motto" loading="lazy" />
+              <div class="card-label">Bubble Wrap</div>
+            </div>
+            <div class="hero-product-card">
+              <img src="assets/images/product-poly.jpg" alt="Polymailer Motto" loading="lazy" />
+              <div class="card-label">Polymailer</div>
+            </div>
+            <div class="hero-product-card">
+              <img src="assets/images/motto-strapping-band.png" alt="Strapping Band Motto" loading="lazy" />
+              <div class="card-label">Strapping Band</div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- ============================================================
+       TRUST BAR — MARQUEE
+  ============================================================ -->
+  <div id="trust-bar" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- Items duplicated for seamless loop -->
+      <div class="marquee-item"><i class="fas fa-circle"></i> OPP Tape</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Bubble Wrap</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Polymailer</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Strapping Band</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Stretch Film</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Rafia</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Alumunium Foil</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Baking Paper</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Kantong Kresek</div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-item"><i class="fas fa-circle"></i> OPP Tape</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Bubble Wrap</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Polymailer</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Strapping Band</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Stretch Film</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Rafia</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Alumunium Foil</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Baking Paper</div>
+      <div class="marquee-item"><i class="fas fa-circle"></i> Kantong Kresek</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left: Text -->
+        <div class="about-text">
+          <span class="section-label reveal">Tentang Kami</span>
+          <h2 class="section-title reveal" id="about-title">
+            Distributor Pengemasan<br />Terpercaya Di Indonesia
+          </h2>
+          <p class="about-body reveal reveal-delay-1">
+            Motto Pack Indonesia adalah distributor terkemuka yang menghadirkan solusi pengemasan
+            komprehensif untuk berbagai kebutuhan industri dan ritel. Dengan portofolio produk
+            yang luas  mulai dari Pengemasan tape, bubble wrap, polymailer, hingga strapping band 
+            kami memastikan setiap bisnis mendapatkan material terbaik dengan harga grosir yang kompetitif.
+          </p>
+
+          <div class="about-highlights">
+            <div class="about-highlight-item reveal reveal-delay-1">
+              <div class="hl-icon"><i class="fas fa-boxes-stacked"></i></div>
+              <div class="hl-content">
+                <strong>Stok Lengkap &amp; Siap Kirim</strong>
+                <span>Gudang siap dengan ratusan varian SKU Pengemasan &amp; FMCG</span>
+              </div>
+            </div>
+            <div class="about-highlight-item reveal reveal-delay-2">
+              <div class="hl-icon"><i class="fas fa-handshake"></i></div>
+              <div class="hl-content">
+                <strong>Harga Grosir B2B</strong>
+                <span>Program harga khusus untuk pembelian partai besar dan kemitraan jangka panjang</span>
+              </div>
+            </div>
+            <div class="about-highlight-item reveal reveal-delay-3">
+              <div class="hl-icon"><i class="fas fa-medal"></i></div>
+              <div class="hl-content">
+                <strong>Produk Berstandar Kualitas</strong>
+                <span>Setiap produk melewati quality control ketat sebelum dikirimkan ke pelanggan</span>
+              </div>
+            </div>
+            <div class="about-highlight-item reveal reveal-delay-4">
+              <div class="hl-icon"><i class="fas fa-truck-fast"></i></div>
+              <div class="hl-content">
+                <strong>Gratis Ongkir Jabodetabek Dengan MOQ Tertentu</strong>
+                <span>Kami siap melayani pesanan B2B, reseller, maupun kebutuhan personal</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary reveal reveal-delay-5">
+            Diskusikan Kebutuhan Anda <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Right: Stat Cards -->
+        <div class="about-visual reveal reveal-delay-2">
+          <div class="stat-card">
+            <div class="stat-num">13<span></span></div>
+            <div class="stat-label">Kategori Produk</div>
+            <i class="fas fa-layer-group stat-icon" aria-hidden="true"></i>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">300<span>+</span></div>
+            <div class="stat-label">Varian SKU</div>
+            <i class="fas fa-barcode stat-icon" aria-hidden="true"></i>
+          </div>
+          <div class="stat-card featured">
+            <div>
+              <div class="stat-num" style="font-size:36px;">Ulasan Pelanggan
+              <div class="stat-desc">
+                Lebih dari 1.000 pelaku bisnis telah membuktikan keandalan produk dan layanan kami
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRODUCTS SECTION
+  ============================================================ -->
+  <section id="products" aria-labelledby="products-title">
+    <div class="container">
+
+      <div class="products-header">
+        <span class="section-label reveal">Katalog Produk</span>
+        <h2 class="section-title reveal" id="products-title">
+          Semua Kebutuhan Pengemasan<br />Dalam Satu Tempat
+        </h2>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="product-tabs reveal" role="tablist" aria-label="Filter Kategori Produk">
+        <button class="tab-btn active" data-filter="all"        role="tab" aria-selected="true">Semua</button>
+        <button class="tab-btn"        data-filter="lakban"     role="tab" aria-selected="false">Aneka Lakban</button>
+        <button class="tab-btn"        data-filter="non-lakban" role="tab" aria-selected="false">Alat Packing Lainnya</button>
+      </div>
+      <p class="kt-intro" id="ktIntro" hidden></p>
+
+      <div class="kt-toolbar">
+        <div class="kt-count" id="ktCount" aria-live="polite"></div>
+        <label class="kt-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="ktSearch" type="search" placeholder="Cari produk..." aria-label="Cari produk" />
+        </label>
+      </div>
+
+      <p class="kt-note" id="ktNote" hidden></p>
+
+      <!-- Products Grid (diisi oleh JS dari data katalog di bawah) -->
+      <div class="kt-grid" id="ktGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       E-COMMERCE SECTION
+  ============================================================ -->
+  <section id="ecommerce" aria-labelledby="ecommerce-title">
+    <div class="container">
+
+      <div class="ecommerce-header" style="max-width:600px; margin:0 auto; text-align:center;">
+        <span class="section-label reveal">Toko Online Resmi</span>
+        <h2 class="section-title reveal" id="ecommerce-title">
+          Belanja Langsung Di<br />Platform Terpercaya
+        </h2>
+        <p class="section-subtitle reveal reveal-delay-1">
+          Temukan seluruh katalog produk Motto Pack Indonesia di toko resmi kami.
+          Belanja aman, pengiriman cepat, dan layanan purna jual terjamin.
+        </p>
+      </div>
+
+      <div class="ecommerce-grid">
+
+        <!-- Shopee Card -->
+        <a class="store-card shopee reveal"
+           href="https://shopee.co.id/motto.indonesia"
+           target="_blank" rel="noopener"
+           aria-label="Kunjungi Toko Motto Pack di Shopee">
+          <div class="store-card-circle"></div>
+          <div class="store-card-circle-2"></div>
+          <div class="store-platform-icon">
+            <i class="fas fa-bag-shopping"></i>
+          </div>
+          <div class="store-card-content">
+            <div class="store-card-platform">Toko Resmi</div>
+            <div class="store-card-title">Shopee</div>
+          </div>
+          <div class="store-card-link">
+            <i class="fas fa-arrow-right"></i>
+            Klik di sini
+          </div>
+        </a>
+
+        <!-- Tokopedia Card -->
+        <a class="store-card tokopedia reveal reveal-delay-1"
+           href="https://www.tokopedia.com/mottopackindonesia"
+           target="_blank" rel="noopener"
+           aria-label="Kunjungi Toko Motto Pack di Tokopedia">
+          <div class="store-card-circle"></div>
+          <div class="store-card-circle-2"></div>
+          <div class="store-platform-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <div class="store-card-content">
+            <div class="store-card-platform">Toko Resmi</div>
+            <div class="store-card-title">Tokopedia</div>
+          </div>
+          <div class="store-card-link">
+            <i class="fas fa-arrow-right"></i>
+            Klik di sini
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Media Sosial SECTION
+  ============================================================ -->
+  <section id="social" aria-labelledby="social-title">
+    <div class="container">
+
+      <div class="social-header">
+        <span class="section-label reveal">Media Sosial</span>
+        <h2 class="section-title reveal" id="social-title">Ikuti Kami di Media Sosial</h2>
+        <p class="section-subtitle reveal reveal-delay-1">
+          Dapatkan informasi produk terbaru, tips Pengemasan, dan promo eksklusif.
+        </p>
+      </div>
+
+      <div class="social-grid">
+
+        <!-- Instagram -->
+        <div class="social-card instagram reveal">
+          <div class="social-icon-wrap">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="social-card-name">Instagram</div>
+          <div class="social-card-handle">@motto.indonesia</div>
+          <a href="https://www.instagram.com/motto.indonesia/?hl=id"
+             target="_blank" rel="noopener"
+             class="btn btn-dark"
+             aria-label="Kunjungi Instagram Motto Indonesia">
+            <i class="fab fa-instagram"></i> Follow Instagram
+          </a>
+        </div>
+
+        <!-- TikTok -->
+        <div class="social-card tiktok reveal reveal-delay-1">
+          <div class="social-icon-wrap">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <div class="social-card-name">TikTok</div>
+          <div class="social-card-handle">@motto.pack.indonesia</div>
+          <a href="https://www.tiktok.com/@motto.pack.indonesia"
+             target="_blank" rel="noopener"
+             class="btn btn-dark"
+             aria-label="Kunjungi TikTok Motto Pack Indonesia">
+            <i class="fab fa-tiktok"></i> Follow TikTok
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT / SALES SECTION
+  ============================================================ -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="contact-bg-orb" aria-hidden="true"></div>
+    <div class="container">
+      <div class="contact-inner">
+
+        <!-- Left: Text + Details -->
+        <div class="contact-text">
+          <span class="section-label reveal" style="color:var(--red-light);">Hubungi Sales</span>
+          <h2 class="section-title reveal" id="contact-title">
+            Siap Melayani<br />Kebutuhan Bisnis Anda
+          </h2>
+          <p class="section-subtitle reveal reveal-delay-1">
+            Tim sales kami siap membantu kebutuhan grosir, permintaan kustom, dan konsultasi
+             pengemasan bisnis Anda.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item reveal reveal-delay-2">
+              <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="ci-text">
+                <strong>Puspa — Sales Representative</strong>
+                <span>+62 852-1571-1572</span>
+              </div>
+            </div>
+            <div class="contact-detail-item reveal reveal-delay-4">
+              <div class="ci-icon"><i class="fas fa-store"></i></div>
+              <div class="ci-text">
+                <strong>Shopee Toko Resmi</strong>
+                <span>shopee.co.id/motto.indonesia</span>
+              </div>
+            </div>
+            <div class="contact-detail-item reveal reveal-delay-4">
+              <div class="ci-icon"><i class="fas fa-store"></i></div>
+              <div class="ci-text">
+                <strong>Tokopedia Toko Resmi</strong>
+                <span>tokopedia.com/mottopackindonesia</span>
+              </div>
+            </div>
+            <div class="contact-detail-item reveal reveal-delay-5">
+              <div class="ci-icon"><i class="fab fa-instagram"></i></div>
+              <div class="ci-text">
+                <strong>Instagram &amp; TikTok</strong>
+                <span> @motto.pack.indonesia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: CTA Card -->
+        <div class="contact-cta-card reveal reveal-delay-2">
+          <h3>Chat Langsung via WhatsApp</h3>
+          <a href="https://wa.me/6285215711572?text=Halo%20Puspa%2C%20saya%20ingin%20bertanya%20tentang%20produk%20dan%20harga%20grosir%20Motto%20Pack%20Indonesia."
+             target="_blank" rel="noopener"
+             class="wa-contact-btn"
+             aria-label="Chat WhatsApp dengan Puspa">
+            <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="wa-text">
+              <strong>Chat Puspa Sekarang</strong>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/images/logo.png" alt="Motto Pack Indonesia Logo" />
+          </div>
+          <p class="footer-desc">
+            Distributor terpercaya produk pengemasan industri &amp; FMCG Di Indonesia.
+            Mitra bisnis Anda untuk solusi pengemasan yang lengkap dan berkualitas.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/motto.indonesia/?hl=id" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@motto.pack.indonesia" target="_blank" rel="noopener" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://shopee.co.id/motto.indonesia" target="_blank" rel="noopener" aria-label="Shopee">
+              <i class="fas fa-bag-shopping"></i>
+            </a>
+            <a href="https://wa.me/6285215711572" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Produk Column -->
+        <div>
+          <div class="footer-col-title">Produk</div>
+          <ul class="footer-links">
+            <li><a href="#products">OPP Tape / Lakban</a></li>
+            <li><a href="#products">Bubble Wrap</a></li>
+            <li><a href="#products">Polymailer</a></li>
+            <li><a href="#products">Strapping Band</a></li>
+            <li><a href="#products">Stretch Film</a></li>
+          </ul>
+        </div>
+
+        <!-- Toko Column -->
+        <div>
+          <div class="footer-col-title">Toko Resmi</div>
+          <ul class="footer-links">
+            <li><a href="https://shopee.co.id/motto.indonesia" target="_blank" rel="noopener">Shopee</a></li>
+            <li><a href="https://www.tokopedia.com/mottopackindonesia" target="_blank" rel="noopener">Tokopedia</a></li>
+          </ul>
+          <div class="footer-col-title" style="margin-top:28px;">Media Sosial</div>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/motto.indonesia/?hl=id" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@motto.pack.indonesia" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak Column -->
+        <div>
+          <div class="footer-col-title">Hubungi Kami</div>
+          <ul class="footer-links">
+            <li>
+              <a href="https://wa.me/6285215711572" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp" style="color:#25D366;margin-right:6px;"></i>
+                Puspa — Sales Representative
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 <a href="#hero">Motto Pack Indonesia</a>. All rights reserved.
+        </p>
+        <nav class="footer-bottom-links" aria-label="Footer Bottom Links">
+          <a href="#hero">Beranda</a>
+          <a href="#about">Tentang</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Salinan daftar harga: dipakai hanya kalau harga.txt tidak bisa dimuat (mis. preview dengan klik dua kali file). Sumber utama: harga.txt -->
+  <script type="text/plain" id="ktHargaFallback">
+# ==========================================================
+# DAFTAR HARGA - Motto Pack Indonesia
+# ==========================================================
+# Cara pakai: satu produk per baris, tulis   Nama Produk = harga
+#   - Rentang harga : Lakban Blok = 40.000 - 60.000
+#   - Satu harga    : Lakban Kain = 25.000
+#   - Boleh tambah keterangan: Lakban Kain = 25.000 / roll
+#   - Awalan "Rp" ditambahkan otomatis di website.
+#   - Harga dikosongkan (tidak ada angka setelah tanda =) -> harga tidak ditampilkan.
+#   - Baris yang diawali tanda # diabaikan.
+#   - Nama boleh disingkat (mis. "double tape") selama hanya cocok dengan SATU produk.
+#     Kalau cocok dengan lebih dari satu, harga itu tidak dipakai. Paling aman copy nama persis dari daftar di bawah.
+# Simpan sebagai harga.txt (UTF-8), letakkan di folder yang sama dengan index.html.
+# ==========================================================
+
+# Tanggal pembaruan (opsional, tampil di bawah kotak pencarian):
+Diperbarui =
+
+# --- Aneka Lakban ---
+Lakban OPP (Bening & Cokelat) = 336.000 - 1.042.000
+Lakban Warna (Pigmen) = 508.000 - 624.000
+Lakban Blok = 791.000
+Lakban Fragile = 493.000 - 983.000
+Lakban Fragile Unboxing = 463.000 - 762.000
+Lakban Shopee = 700.000 - 791.000
+Lakban Tokopedia = 791.000 - 973.000
+Lakban Kain = 605.000 - 625.000
+Lakban Kertas / Masking Tape = 443.000 - 483.000
+Lakban Kraft Tape = 377.000
+Lakban Aluminium Foil = 1.036.000
+Double Tape Kertas = 526.000 - 664.000
+PE Double Foam Tape = 457.000 - 558.000
+EVA Double Foam Tape = 446.000 - 540.000
+Isolasi Bening = 369.000 - 574.000
+Isolasi Warna (Pigmen) = 551.000
+Isolasi Listrik PVC = 1.463.000
+Isolasi Fresh (Sayur) = 574.000
+PVC Floor Marking = 34.000 - 36.000
+Dispenser Lakban 2 Inch = 8.000 - 9.000
+Dispenser Lakban Jumbo = 40.000
+Dispenser Isolasi = 31.000
+
+# --- Aneka Non Lakban ---
+Bubble Wrap = 92.000 - 142.000
+Stretch Film = 15.000 - 113.000
+Tali Strapping Band (Manual, Semi Auto, Full Auto, PET) = 67.000 - 508.000
+Klem Lipat / Clamp Plat Seng = 27.000
+Klem Letter U / Clamp Plat Seng = 38.000
+Gesper Plastik = 66.000
+Karet Siku = 16.000
+XP Tool (Alat Packing Strapping Band) = 361.000
+Tali Rafia = 9.000 - 42.000
+Label Thermal = 38.000 - 51.000
+Label Thermal Unboxing = 67.000
+Plastik Polymailer = 11.000 - 101.000
+Single Face Roll = 37.000 - 254.000
+Kenko Cutter = 77.000 - 199.000
+Kenko Cutter Blade (Isi Pisau Cutter) = 42.000 - 83.000
+Plastik Sampah = 15.000
+Kardus Packing = 1.000 - 24.000
+Kantong Plastik = 12.000
+Cling Wrap Food Grade = 11.000 - 15.000
+Bliss PVC Cling Wrap Industry = 70.000 - 207.000
+Bliss Aluminium Foil = 13.000 - 19.000
+Bliss Baking Paper = 13.000 - 17.000
+</script>
+
+  <!-- Modal detail produk katalog -->
+  <div class="kt-overlay" id="ktOverlay" aria-hidden="true">
+    <div class="kt-modal" role="dialog" aria-modal="true" aria-labelledby="ktTitle">
+      <button class="kt-close" id="ktClose" type="button" aria-label="Tutup">&times;</button>
+      <div class="kt-m-visual" id="ktVisual"></div>
+      <div class="kt-m-body">
+        <span class="kt-m-eyebrow">Detail Produk</span>
+        <h2 id="ktTitle"></h2>
+        <div class="kt-m-price" id="ktPrice" hidden></div>
+        <p id="ktDesc"></p>
+        <dl class="kt-specs">
+          <div><dt>Lebar</dt><dd id="ktSizeW">-</dd></div>
+          <div><dt>Panjang</dt><dd id="ktSizeL">-</dd></div>
+          <div><dt>Kemasan</dt><dd>Eceran &amp; grosir</dd></div>
+          <div><dt>Ketersediaan</dt><dd>Stok Tersedia</dd></div>
+        </dl>
+        <div class="kt-m-actions">
+          <a class="btn btn-primary" id="ktWa" href="https://wa.me/6285215711572" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> Tanya &amp; Pesan via WhatsApp</a>
+          <button class="btn btn-light" id="ktBack" type="button">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    /* ── Navbar scroll behavior ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* ── Mobile menu toggle ── */
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    /* Close mobile menu on outside click */
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    /* ── Active nav link highlight on scroll ── */
+    const sections  = document.querySelectorAll('section[id], div[id="trust-bar"]');
+    const navAnchors = document.querySelectorAll('.nav-links a');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navAnchors.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`);
+          });
+        }
+      });
+    }, { threshold: 0.35 });
+
+    document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
+
+    /* ── Scroll reveal ── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ── Katalog produk: data, filter tab, pencarian, modal detail ── */
+    (function () {
+      'use strict';
+
+      /* Data katalog: [nama, deskripsi, gambar, kategori]. Edit/tambah produk di sini. */
+      var DATA = [
+      ["Lakban OPP (Bening & Cokelat)", "Lakban perekat kuat untuk penyegelan kardus, tersedia bening dan cokelat.", "assets/Lakban OPP (Bening & Cokelat)/Motto_48mmx85mx45micron_Bening_3.jpg", "lakban"],
+      ["Lakban Warna (Pigmen)", "Lakban OPP berwarna untuk pengkodean, branding, dan tampilan kemasan menarik.", "assets/Lakban Warna (Pigmen)/Motto_48mmx50mx47micron_Pigmen_Hijau_3.jpg", "lakban"],
+      ["Lakban Blok", "Lakban cetak blok untuk kebutuhan penanda dan identitas paket.", "assets/Lakban Blok/Motto_Full-Blok_Compilation_2.jpg", "lakban"],
+      ["Lakban Fragile", "Lakban bertanda 'Fragile' agar paket mudah dikenali dan ditangani hati-hati.", "assets/Lakban Fragile/Motto_48mmx50mx48micron_Fragile_Putih_4.jpg", "lakban"],
+      ["Lakban Fragile Unboxing", "Lakban fragile dengan fungsi tambahan untuk bukti unboxing paket.", "assets/Lakban Fragile Unboxing/Motto_45mmx70mx48micron_Unboxing_Putih_4.jpg", "lakban"],
+      ["Lakban Shopee", "Lakban bermotif Shopee untuk pengemasan toko online.", "assets/Lakban Shopee/Motto_48mmx70mx48micron_Shopee_Orange_3.jpg", "lakban"],
+      ["Lakban Tokopedia", "Lakban bermotif Tokopedia untuk pengemasan toko online.", "assets/Lakban Tokopedia/Motto_48mmx70mx48micron_Tokopedia_Hijau_4.jpg", "lakban"],
+      ["Lakban Kain", "Lakban berbahan kain, kuat, mudah disobek tangan, serbaguna.", "assets/Lakban Kain/Motto_44mmx8m_Lakban-Kain_Kuning_3.jpg", "lakban"],
+      ["Lakban Kertas / Masking Tape", "Perekat kertas mudah dilepas, cocok untuk pelabelan, pengecatan, dan penandaan.", "assets/Lakban Kertas - Masking Tape/Motto_Lakban-Kertas.png", "lakban"],
+      ["Lakban Kraft Tape", "Lakban kertas kraft ramah lingkungan untuk kemasan premium.", "assets/Lakban Kraft Tape/Motto_48mmx10m_Kraft-Tape_2.jpg", "lakban"],
+      ["Lakban Aluminium Foil", "Lakban foil tahan panas dan kedap untuk keperluan insulasi dan perbaikan.", "assets/Lakban Aluminium Foil/Motto_44mmx15m_Alumunium-Tape_2.jpg", "lakban"],
+      ["Double Tape Kertas", "Perekat dua sisi berbahan kertas, tipis dan rapi untuk kerajinan dan kemasan.", "assets/Double Tape Kertas/Motto_Double-Tape_Compilations.png", "lakban"],
+      ["PE Double Foam Tape", "Busa PE dua sisi dengan daya rekat kuat untuk pemasangan dan dekorasi.", "assets/PE Double Foam Tape/Motto_24mmx5m_PE-Double-Foam_2.jpg", "lakban"],
+      ["EVA Double Foam Tape", "Busa EVA dua sisi, empuk dan tahan lama untuk berbagai permukaan.", "assets/EVA Double Foam Tape/Motto_24mmx5m_EVA-Double-Foam-Tape_2.jpg", "lakban"],
+      ["Isolasi Bening", "Isolasi transparan serbaguna untuk kebutuhan kantor dan rumah.", "assets/Isolasi Bening/Motto_Isolasi_Compilation.png", "lakban"],
+      ["Isolasi Warna (Pigmen)", "Isolasi berwarna untuk dekorasi, kerajinan, dan penandaan.", "assets/Isolasi Warna (Pigmen)/Motto_12mmx60mx47micron_Isolasi-Pigmen_Hitam_3.jpg", "lakban"],
+      ["Isolasi Listrik PVC", "Isolasi PVC untuk melindungi sambungan kabel listrik.", "assets/Isolasi Listrik PVC/Motto_PVC-Electric.png", "lakban"],
+      ["Isolasi Fresh (Sayur)", "Isolasi khusus pengikat sayuran segar, praktis dan higienis.", "assets/Isolasi Fresh (Sayur)/Motto_18mmx50mx48micron_Isolasi-Fresh_3.jpg", "lakban"],
+      ["PVC Floor Marking", "Perekat lantai untuk penanda area, jalur, dan keselamatan gudang.", "assets/PVC Floor Marking/Motto_48mmx33m_Kuning-Hitam_3.jpg", "lakban"],
+      ["Dispenser Lakban 2 Inch", "Dispenser lakban ukuran 2 inci untuk pengemasan lebih cepat.", "assets/Dispenser Lakban 2 Inch/Motto_Tape_Dispenser_300m_2.jpg", "lakban"],
+      ["Dispenser Lakban Jumbo", "Dispenser lakban ukuran jumbo untuk volume packing tinggi.", "assets/Dispenser Lakban Jumbo/Motto_Tape_Dispenser_Jumbo_2.jpg", "lakban"],
+      ["Dispenser Isolasi", "Dispenser isolasi praktis dan stabil untuk meja kerja.", "assets/Dispenser Isolasi/Motto_SKUs_Dispenser-Isolasi_Replacement_3.jpg", "lakban"],
+      ["Bubble Wrap", "Plastik gelembung udara pelindung barang pecah belah saat pengiriman.", "assets/Bubble Wrap/Motto_Wrap-Polos_Tanpa-Core_Hitam_1.jpg", "non-lakban"],
+      ["Stretch Film", "Film plastik regang untuk membungkus dan mengunci palet atau barang.", "assets/Stretch Film/Motto_50cmx110mx17micron_Clear_3.jpg", "non-lakban"],
+      ["Tali Strapping Band (Manual, Semi Auto, Full Auto, PET)", "Tali pengikat kuat untuk berbagai metode pengikatan, dari manual hingga mesin otomatis.", "assets/Tali Strapping Band/Motto_SB_Compilations.png", "non-lakban"],
+      ["Klem Lipat / Clamp Plat Seng", "Klem plat seng berbentuk lipat untuk mengunci sambungan strapping band.", "assets/Klem Lipat - Clamp Plat Seng/Motto_Strapping-Band_Accessories_Klem-Lipat_2.jpg", "non-lakban"],
+      ["Klem Letter U / Clamp Plat Seng", "Klem plat seng bentuk U untuk pengunci strapping band yang kokoh.", "assets/Klem Letter U - Clamp Plat Seng/Motto_Strapping-Band_Accessories_Klem-Letter-U_2.jpg", "non-lakban"],
+      ["Gesper Plastik", "Gesper plastik untuk mengunci tali strapping tanpa alat tambahan.", "assets/Gesper Plastik/Motto_Strapping-Band_Accessories_Gesper_3.jpg", "non-lakban"],
+      ["Karet Siku", "Pelindung siku kardus dan palet agar sudut tidak rusak saat diikat.", "assets/Karet Siku/Motto_Strapping-Band_Accessories_Karet-Siku_2.jpg", "non-lakban"],
+      ["XP Tool (Alat Packing Strapping Band)", "Alat packing manual untuk menarik dan mengencangkan strapping band.", "assets/XP Tool (Alat Packing Strapping Band)/Motto_Strapping-Band_Accessories_XP-Tool_5.jpg", "non-lakban"],
+      ["Tali Rafia", "Tali plastik ringan dan kuat untuk mengikat berbagai barang.", "assets/Tali Rafia/Motto_Rafia_10ons_Warna_Hijau_4.jpg", "non-lakban"],
+      ["Label Thermal", "Stiker label thermal untuk resi dan pelabelan pengiriman.", "assets/Label Thermal/Motto_Thermal-Sticker_100x150_3.jpg", "non-lakban"],
+      ["Label Thermal Unboxing", "Label thermal dengan fitur bukti unboxing untuk keamanan paket.", "assets/Label Thermal Unboxing/Motto_SKUs_Thermal-Unboxing-Roll_3.jpg", "non-lakban"],
+      ["Plastik Polymailer", "Kantong kirim anti air dengan perekat kuat, ideal untuk online shop.", "assets/Plastik Polymailer/Motto_Ecommerce_Polymailer_Compilation_2.jpg", "non-lakban"],
+      ["Single Face Roll", "Karton gelombang gulung untuk melindungi dan membungkus produk.", "assets/Single Face Roll/Motto_Ecommerce_Singleface_SF160_4.jpg", "non-lakban"],
+      ["Kenko Cutter", "Cutter berkualitas dengan mata pisau tajam untuk kebutuhan packing.", "assets/Kenko Cutter/Motto_SKUs_Cutters_LSeries_Compilation_2.jpg", "non-lakban"],
+      ["Kenko Cutter Blade (Isi Pisau Cutter)", "Isi ulang pisau cutter tajam dan awet.", "assets/Kenko Cutter Blade (Isi Pisau Cutter)/Motto_SKUs_Cutters_L150_Dozen_3.jpg", "non-lakban"],
+      ["Plastik Sampah", "Kantong sampah kuat tersedia dalam berbagai ukuran.", "assets/Plastik Sampah/Motto_SKU_Plastik-Sampah_40x50_5.jpg", "non-lakban"],
+      ["Kardus Packing", "Kardus packing kokoh berbagai ukuran untuk pengiriman aman.", "assets/Kardus Packing/Motto_Kardus-Karton_70x50x40_6.jpg", "non-lakban"],
+      ["Kantong Plastik", "Kantong plastik serbaguna untuk kemasan retail dan harian.", "assets/Kantong Plastik/Motto_Plastik-Kresek_Compilation_9.jpg", "non-lakban"],
+      ["Cling Wrap Food Grade", "Plastik pembungkus makanan aman dan higienis untuk menjaga kesegaran.", "assets/Cling Wrap Food Grade/Motto_Cling-Wrap_Bliss_Household_Comp_9.png", "non-lakban"],
+      ["Bliss PVC Cling Wrap Industry", "Cling wrap PVC industri untuk pembungkusan skala besar.", "assets/Bliss PVC Cling Wrap Industry/Motto_Cling-Wrap_SKUs_Bliss_Compilation_2.jpg", "non-lakban"],
+      ["Bliss Aluminium Foil", "Aluminium foil rumah tangga dan industri untuk memasak dan menyimpan makanan.", "assets/Bliss Aluminium Foil/Motto_Alu-Wrap_Bliss_Comp_7.png", "non-lakban"],
+      ["Bliss Baking Paper", "Kertas baking anti lengket untuk memanggang.", "assets/Bliss Baking Paper/Motto_Bliss_Baking-Paper_Comp_7.png", "non-lakban"]
+      ];
+      var INTRO = {"lakban": "Lakban dan isolasi lengkap untuk pengemasan, penandaan, dan kebutuhan harian bisnis Anda.", "non-lakban": "Bahan Pengemasan, strapping, label, dan perlengkapan pendukung untuk pengiriman yang aman dan profesional."};
+      var ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>';
+
+      var $ = function (s, r) { return (r || document).querySelector(s); };
+      var grid = $('#ktGrid'), count = $('#ktCount'), search = $('#ktSearch'), intro = $('#ktIntro');
+      var overlay = $('#ktOverlay'), lastFocus = null;
+      var tabs = document.querySelectorAll('.product-tabs .tab-btn');
+      var cat = 'all';
+      var prices = {};
+
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+      function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+      function src(u) { return esc(encodeURI(u)); }
+
+      var items = DATA.map(function (it, i) { return { i: i, name: it[0], desc: it[1], img: it[2] || '', cat: it[3] }; });
+
+      var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting) {
+            var el = e.target;
+            el.classList.add('in');
+            io.unobserve(el);
+            /* hapus delay stagger setelah muncul supaya efek hover tidak ikut tertunda */
+            setTimeout(function () { el.style.transitionDelay = ''; }, 900);
+          }
+        });
+      }, { threshold: 0.08 }) : null;
+
+      function render(list, total) {
+        if (!list.length) {
+          grid.innerHTML = '<p class="kt-empty">Produk tidak ditemukan. Coba kata kunci lain atau <a href="https://wa.me/6285215711572?text=Halo%20Puspa%2C%20saya%20mencari%20produk%20yang%20belum%20ada%20di%20katalog." target="_blank" rel="noopener">tanyakan ke sales kami</a>.</p>';
+          count.innerHTML = '<b>0</b> produk';
+          return;
+        }
+        grid.innerHTML = list.map(function (p, i) {
+          return '<button class="kt-card" type="button" data-i="' + p.i + '" style="transition-delay:' + Math.min(i % 8, 7) * 45 + 'ms" aria-haspopup="dialog">' +
+            '<div class="kt-thumb">' + (p.img ? '<img loading="lazy" decoding="async" src="' + src(p.img) + '" alt="' + esc(p.name) + '">' : ICON) + '<span class="kt-num">' + pad(p.i + 1) + '</span></div>' +
+            '<div class="kt-body"><h3>' + esc(p.name) + '</h3>' + priceTag(p.i) + '<p>' + esc(p.desc) + '</p><span class="kt-more">Lihat detail <i>→</i></span></div></button>';
+        }).join('');
+        count.innerHTML = 'Menampilkan <b>' + list.length + '</b> dari ' + total + ' produk';
+        grid.querySelectorAll('.kt-card').forEach(function (c) { io ? io.observe(c) : c.classList.add('in'); });
+      }
+
+      /* Harga: dibaca dari harga.txt (format "Nama Produk = harga") */
+      var note = $('#ktNote');
+      function norm(s) { return ' ' + String(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim() + ' '; }
+      var keys = items.map(function (p) { return norm(p.name); });
+      function fmtPrice(v) {
+        v = v.replace(/\s+/g, ' ').trim();
+        if (/^\d/.test(v)) v = 'Rp\u00A0' + v;
+        return v.replace(/\s-\s/g, ' –\u00A0');
+      }
+      function priceTag(i) { return prices[i] ? '<div class="kt-price">' + esc(prices[i]) + '</div>' : ''; }
+      function syncPrices() {
+        grid.querySelectorAll('.kt-card').forEach(function (c) {
+          var i = +c.dataset.i, el = c.querySelector('.kt-price'), v = prices[i];
+          if (v) {
+            if (!el) { el = document.createElement('div'); el.className = 'kt-price'; c.querySelector('h3').insertAdjacentElement('afterend', el); }
+            el.textContent = v;
+          } else if (el) el.remove();
+        });
+      }
+      function parsePrices(text) {
+        var updated = '';
+        prices = {};
+        String(text || '').replace(/^\uFEFF/, '').split(/\r?\n/).forEach(function (line) {
+          line = line.trim();
+          if (!line || line.charAt(0) === '#') return;
+          var k = line.indexOf('=');
+          if (k < 1) return;
+          var name = line.slice(0, k).trim(), val = line.slice(k + 1).trim(), n = norm(name);
+          if (n === ' diperbarui ') { updated = val; return; }
+          if (!val) return;
+          var idx = keys.indexOf(n);
+          if (idx < 0) {
+            var hits = [];
+            keys.forEach(function (kk, i) { if (kk.indexOf(n) > -1) hits.push(i); });
+            if (hits.length !== 1) {
+              console.warn('[harga.txt] "' + name + '" ' + (hits.length ? 'cocok dengan ' + hits.length + ' produk, tulis nama lebih lengkap' : 'tidak cocok dengan produk mana pun') + ' - baris diabaikan');
+              return;
+            }
+            idx = hits[0];
+          }
+          prices[idx] = fmtPrice(val);
+        });
+        note.hidden = !Object.keys(prices).length;
+        note.textContent = 'Harga dapat berubah sewaktu-waktu.' + (updated ? ' Diperbarui: ' + updated + '.' : '');
+      }
+      function loadPrices() {
+        var go = function (t) { parsePrices(t); syncPrices(); };
+        var fb = function () { var t = document.getElementById('ktHargaFallback'); go(t ? t.textContent : ''); };
+        if (!window.fetch) { fb(); return; }
+        fetch('harga.txt', { cache: 'no-store' })
+          .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+          .then(go, fb);
+      }
+
+      function apply() {
+        var q = search.value.trim().toLowerCase();
+        var pool = items.filter(function (p) { return cat === 'all' || p.cat === cat; });
+        var list = pool.filter(function (p) { return !q || (p.name + ' ' + p.desc).toLowerCase().indexOf(q) > -1; });
+        render(list, pool.length);
+      }
+
+      tabs.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          tabs.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          cat = btn.dataset.filter;
+          intro.textContent = INTRO[cat] || '';
+          intro.hidden = !INTRO[cat];
+          apply();
+        });
+      });
+      search.addEventListener('input', apply);
+      apply();
+      loadPrices();
+
+      /* Modal */
+      function openModal(i, trigger) {
+        var p = items[i]; lastFocus = trigger;
+        $('#ktTitle').textContent = p.name;
+        $('#ktWa').href = 'https://wa.me/6285215711572?text=' + encodeURIComponent('Halo Puspa, saya tertarik dengan ' + p.name + '. Boleh minta info ukuran, stok, dan harga grosirnya?');
+        $('#ktDesc').textContent = p.desc;
+        var SZ = {"Lakban OPP (Bening & Cokelat)": ["45, 48 mm", "50, 60, 65, 72, 80, 90, 100, 150, 200, 300, 500 yard"], "Lakban Warna (Pigmen)": ["48 mm", "60 dan 80 yard"], "Lakban Blok": ["48 mm", "60 dan 80 yard"], "Lakban Fragile": ["48 mm", "60, 80, 100 yard"], "Lakban Fragile Unboxing": ["45 mm", "60 dan 80 yard"], "Lakban Shopee": ["48 mm", "80 yard"], "Lakban Tokopedia": ["48 mm", "80 yard"], "Lakban Kain": ["24, 36, 48 mm", "8 yard"], "Lakban Kertas / Masking Tape": ["12, 24, 48 mm", "10 meter"], "Lakban Kraft Tape": ["48 mm", "10 meter"], "Lakban Aluminium Foil": ["44 mm", "15 meter"], "Double Tape Kertas": ["4, 6, 8, 10, 12, 24, 48 mm", "10 meter"], "PE Double Foam Tape": ["20 dan 24 mm", "5 meter"], "EVA Double Foam Tape": ["20 dan 24 mm", "5 meter"], "Isolasi Bening": ["12 dan 24 mm", "60, 72, 90 yard"], "Isolasi Warna (Pigmen)": ["12 mm", "60 yard"], "Isolasi Listrik PVC": ["18 mm", "20 yard"], "Isolasi Fresh (Sayur)": ["18 mm", "60 yard"], "PVC Floor Marking": ["48 mm", "33 meter"]};
+        var z = SZ[p.name] || ['Tersedia berbagai ukuran', 'Tersedia berbagai ukuran'];
+        document.getElementById('ktSizeW').innerHTML = z[0];
+        document.getElementById('ktSizeL').innerHTML = z[1];
+        var pe = $('#ktPrice');
+        pe.textContent = prices[i] || '';
+        pe.hidden = !prices[i];
+        $('#ktVisual').innerHTML = p.img ? '<img src="' + src(p.img) + '" alt="' + esc(p.name) + '">' : ICON;
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('kt-lock');
+        $('#ktClose').focus();
+      }
+      function closeModal() {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('kt-lock');
+        if (lastFocus) lastFocus.focus();
+      }
+      grid.addEventListener('click', function (e) {
+        var card = e.target.closest('.kt-card');
+        if (card) openModal(+card.dataset.i, card);
+      });
+      overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+      $('#ktClose').addEventListener('click', closeModal);
+      $('#ktBack').addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'Tab') {
+          var f = overlay.querySelectorAll('button,a[href]');
+          var first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      });
+    })();
+
+    /* ── Smooth scroll for anchor links ── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = parseInt(getComputedStyle(document.documentElement)
+            .getPropertyValue('--nav-height')) || 80;
+          window.scrollTo({
+            top: target.offsetTop - offset,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    /* ── Counter animation for hero stats ── */
+    function animateCounter(el, target, suffix) {
+      let start = 0;
+      const duration = 1800;
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); /* ease-out-cubic */
+        el.textContent = Math.floor(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    /* Trigger counters when hero stats come into view */
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const numEl = entry.target.querySelector('.hero-stat-num');
+          if (!numEl) return;
+          const text   = numEl.textContent.trim();
+          const num    = parseInt(text);
+          const suffix = text.replace(num, '').replace(/<[^>]*>/g,''); /* strip HTML */
+          if (!isNaN(num)) animateCounter(numEl, num, suffix);
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.hero-stat-item').forEach(el => statsObserver.observe(el));
+
+  </script>
+
+</body>
+</html>

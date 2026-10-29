@@ -1,0 +1,65 @@
+# ==========================================================
+# DAFTAR HARGA - Motto Pack Indonesia
+# ==========================================================
+# Cara pakai: satu produk per baris, tulis   Nama Produk = harga
+#   - Rentang harga : Lakban Blok = 40.000 - 60.000
+#   - Satu harga    : Lakban Kain = 25.000
+#   - Boleh tambah keterangan: Lakban Kain = 25.000 / roll
+#   - Awalan "Rp" ditambahkan otomatis di website.
+#   - Harga dikosongkan (tidak ada angka setelah tanda =) -> harga tidak ditampilkan.
+#   - Baris yang diawali tanda # diabaikan.
+#   - Nama boleh disingkat (mis. "double tape") selama hanya cocok dengan SATU produk.
+#     Kalau cocok dengan lebih dari satu, harga itu tidak dipakai. Paling aman copy nama persis dari daftar di bawah.
+# Simpan sebagai harga.txt (UTF-8), letakkan di folder yang sama dengan index.html.
+# ==========================================================
+
+# Tanggal pembaruan (opsional, tampil di bawah kotak pencarian):
+Diperbarui =
+
+# --- Aneka Lakban ---
+Lakban OPP (Bening & Cokelat) = 336.000 - 1.042.000
+Lakban Warna (Pigmen) = 508.000 - 624.000
+Lakban Blok = 791.000
+Lakban Fragile = 493.000 - 983.000
+Lakban Fragile Unboxing = 463.000 - 762.000
+Lakban Shopee = 700.000 - 791.000
+Lakban Tokopedia = 791.000 - 973.000
+Lakban Kain = 605.000 - 625.000
+Lakban Kertas / Masking Tape = 443.000 - 483.000
+Lakban Kraft Tape = 377.000
+Lakban Aluminium Foil = 1.036.000
+Double Tape Kertas = 526.000 - 664.000
+PE Double Foam Tape = 457.000 - 558.000
+EVA Double Foam Tape = 446.000 - 540.000
+Isolasi Bening = 369.000 - 574.000
+Isolasi Warna (Pigmen) = 551.000
+Isolasi Listrik PVC = 1.463.000
+Isolasi Fresh (Sayur) = 574.000
+PVC Floor Marking = 34.000 - 36.000
+Dispenser Lakban 2 Inch = 8.000 - 9.000
+Dispenser Lakban Jumbo = 40.000
+Dispenser Isolasi = 31.000
+
+# --- Aneka Non Lakban ---
+Bubble Wrap = 92.000 - 142.000
+Stretch Film = 15.000 - 113.000
+Tali Strapping Band (Manual, Semi Auto, Full Auto, PET) = 67.000 - 508.000
+Klem Lipat / Clamp Plat Seng = 27.000
+Klem Letter U / Clamp Plat Seng = 38.000
+Gesper Plastik = 66.000
+Karet Siku = 16.000
+XP Tool (Alat Packing Strapping Band) = 361.000
+Tali Rafia = 9.000 - 42.000
+Label Thermal = 38.000 - 51.000
+Label Thermal Unboxing = 67.000
+Plastik Polymailer = 11.000 - 101.000
+Single Face Roll = 37.000 - 254.000
+Kenko Cutter = 77.000 - 199.000
+Kenko Cutter Blade (Isi Pisau Cutter) = 42.000 - 83.000
+Plastik Sampah = 15.000
+Kardus Packing = 1.000 - 24.000
+Kantong Plastik = 12.000
+Cling Wrap Food Grade = 11.000 - 15.000
+Bliss PVC Cling Wrap Industry = 70.000 - 207.000
+Bliss Aluminium Foil = 13.000 - 19.000
+Bliss Baking Paper = 13.000 - 17.000
